@@ -1,0 +1,28 @@
+
+network_name:
+  ->: select
+  choices:
+    - mainent
+    - sejong
+    - lisbon
+    - berlin
+
+postgresql_admin_user->: input --default icon-admin
+postgresql_admin_password->: input
+
+postgresql_users:
+  - name: icon-worker
+    password->: input icon-worker password
+    privileges: ALL
+  - name: icon-api
+    password->: input icon-api password
+    privileges: SELECT
+
+services:
+  - extractor
+  - transformer
+  - contracts
+  - governance
+  - metrics
+
+gen->: generate init-database.sh.tpl init-database.sh

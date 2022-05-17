@@ -1,4 +1,3 @@
-
 network_name:
   ->: select
   choices:
@@ -25,4 +24,6 @@ services:
   - governance
   - metrics
 
-gen->: generate init-database.sh.tpl init-database.sh
+init->: generate init-database.sh.tpl init-database.sh
+docker->: generate docker-compose.db.yml docker-compose.db.yml
+env->: generate .env.tpl .env

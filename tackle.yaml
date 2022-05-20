@@ -1,7 +1,7 @@
 network_name:
   ->: select
   choices:
-    - mainent
+    - mainnet
     - sejong
     - lisbon
     - berlin

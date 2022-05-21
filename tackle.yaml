@@ -25,5 +25,5 @@ services:
   - metrics
 
 init->: generate init-database.sh.tpl init-database.sh
-docker->: generate docker-compose.db.yml docker-compose.db.yml
+docker->: generate docker-compose.db.yml .
 env->: generate .env.tpl .env

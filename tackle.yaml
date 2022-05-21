@@ -26,4 +26,5 @@ services:
 
 init->: generate init-database.sh.tpl init-database.sh
 docker->: generate docker-compose.db.yml .
+pg_conf->: generate postgresql.conf .
 env->: generate .env.tpl .env
